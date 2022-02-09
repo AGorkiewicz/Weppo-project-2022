@@ -1,0 +1,13 @@
+<tr>
+  <td>
+    <%= id %>
+  </td>
+  <td>
+    <%= Object.keys(game.players).length %>
+  </td>
+  <td>
+    <form method='post'>
+      <button style='width:60%'' name='join game' type='submit' class='btn btn-success' value='<%= id %>'>Join Game</button>
+    </form>
+  </td>
+</tr>

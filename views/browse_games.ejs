@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Browse games</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'
+    integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous'>
+  <style>
+    tr {
+      border: 1px solid black;
+    }
+
+    th, td {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <section class='vh-100'>
+    <div class='container h-100'>
+
+      <div class='h-100'>
+        <div class='d-flex flex-column align-items-center justify-content-center h-100'>
+          <h1>Browse games</h1>
+          <table style='width:80%'>
+            <tr>
+              <th style='width:33%'>Game Code</th>
+              <th style='width:34%'>Number of Players</th>
+              <th style='width:33%'> </th>
+            </tr>
+            <% for (let id in state){ %>
+              <%- include('table_row', {id, game: state[id]}) %>
+            <% } %>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Weppo project</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'
+    integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' crossorigin='anonymous'>
+</head>
+
+<body style='background-color:#33475b'>
+  <section class='vh-100'>
+    <div class='container h-100'>
+      <div id='gameScreen' class='h-100'>
+        <div class='d-flex flex-column align-items-center justify-content-center h-100'>
+          <h2 style='color:white'>Game code: <span id='roomNameDisplay'></span></h2>
+          <h2 style='color:white'>Score:
+            <span id='scoreDisplay0' style='color: blue'></span>
+            -
+            <span id='scoreDisplay1' style='color: red'></span>
+          </h2>
+          <div>
+            <input type='text' placeholder='Your name' id='newNameInput'/>
+            <button type='submit' class='btn btn-success' id='changeNameButton'>Change Name</button>
+            <button type='submit' class='btn btn-success' id='changeTeamButton'>Change team</button>
+            <button type='submit' class='btn btn-success' id='resetScoreButton'>Reset score</button>
+          </div>
+          <canvas id='canvas'></canvas>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script src='/socket.io/socket.io.js'></script>
+  <script src='index.js'></script>
+</body>
+
+</html>
